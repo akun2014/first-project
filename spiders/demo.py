@@ -9,6 +9,8 @@ Created on 2024-03-25 00:00:31
 
 import feapder
 
+from items.item import DemoDataItem
+
 
 class Demo(feapder.AirSpider):
     def start_requests(self):
@@ -20,6 +22,10 @@ class Demo(feapder.AirSpider):
         # 提取网站描述
         print(response.xpath("//meta[@name='description']/@content").extract_first())
         print("网站地址: ", response.url)
+        item = DemoDataItem()
+        item.url = response.url
+        item.update_key = response.url
+        yield item
 
 
 if __name__ == "__main__":

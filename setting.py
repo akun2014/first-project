@@ -11,9 +11,9 @@
 # MYSQL_USER_PASS = ""
 #
 # # MONGODB
-# MONGO_IP = "localhost"
-# MONGO_PORT = 27017
-# MONGO_DB = ""
+MONGO_IP = "localhost"
+MONGO_PORT = 27017
+MONGO_DB = "demo"
 # MONGO_USER_NAME = ""
 # MONGO_USER_PASS = ""
 #
@@ -28,11 +28,11 @@
 # REDISDB_SERVICE_NAME = ""
 #
 # # 数据入库的pipeline，可自定义，默认MysqlPipeline
-# ITEM_PIPELINES = [
-#     "feapder.pipelines.mysql_pipeline.MysqlPipeline",
-#     # "feapder.pipelines.mongo_pipeline.MongoPipeline",
-#     # "feapder.pipelines.console_pipeline.ConsolePipeline",
-# ]
+ITEM_PIPELINES = [
+    # "feapder.pipelines.mysql_pipeline.MysqlPipeline",
+    "feapder.pipelines.mongo_pipeline.MongoPipeline",
+    # "feapder.pipelines.console_pipeline.ConsolePipeline",
+]
 # EXPORT_DATA_MAX_FAILED_TIMES = 10  # 导出数据时最大的失败次数，包括保存和更新，超过这个次数报警
 # EXPORT_DATA_MAX_RETRY_TIMES = 10  # 导出数据时最大的重试次数，包括保存和更新，超过这个次数则放弃重试
 #
