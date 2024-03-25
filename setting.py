@@ -11,7 +11,7 @@
 # MYSQL_USER_PASS = ""
 #
 # # MONGODB
-MONGO_IP = "localhost"
+MONGO_IP = "10.0.12.13"
 MONGO_PORT = 27017
 MONGO_DB = "demo"
 # MONGO_USER_NAME = ""
